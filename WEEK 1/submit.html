@@ -1,0 +1,52 @@
+<html>
+<head>
+<script>
+function validateForm() {
+var x = document.forms["myForm"]["fname"].value;
+var a = document.forms["myForm"]["pno"].value;
+var y = document.forms["myForm"]["amount"].value;
+var z = document.forms["myForm"]["email"].value;
+if (x == "") {
+alert("Name must be filled out");
+return false;
+}
+if (a == "") {
+alert("Phone no must be filled out");
+return false;
+}
+if (y== "") {
+alert("Amount must be filled out");
+return false;
+}
+if (z == "") {
+alert("Email must be filled out");
+return false;
+}
+}
+</script>
+</head>
+<body><body bgcolor="yellow">
+<center>
+<h2>CHECKOUT PAGE</h2>
+<form name="myForm" action="success.html" onsubmit="return validateForm()" method="post>
+<label for="fname">First name:</label><br>
+<input type="text" id="fname" name="fname"><br>
+<label for="pno">Phone Number</label><br>
+<input type="text" id="pno" name="pno"><br>
+<label for="Amount">amount</label><br>
+<input type="text" id="amount" name="amount" ><br>
+<label for="Email">Email</label><br>
+<input type="text" id="email" name="Email" ><br>
+<label for="pay">Choose a method</label>
+<select name="pay" id="pay">
+<option value="ccard">Credit Card</option>
+<option value="dcard">Debit Card</option>
+<option value="upi">UPI</option>
+</select>
+<br>
+<input type="submit" value="PAY NOW"><br>
+</form>
+</center>
+</script>
+</body>
+</html>
